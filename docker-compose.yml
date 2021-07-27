@@ -37,7 +37,7 @@ services:
 
   celery:
     build: .
-    #command: celery -A skeletonProject worker -l info
+    #command: celery -A django_docker worker -l info
     volumes:
       - .:/app
     depends_on:
@@ -46,7 +46,7 @@ services:
 
   celery-beat:
     build: .
-    #command: celery -A skeletonProject beat -l info
+    #command: celery -A django_docker beat -l info
     volumes:
       - .:/app
     depends_on:
